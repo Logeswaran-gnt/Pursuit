@@ -19,13 +19,9 @@ def login_todo(request):
     print(request.user, request.user.is_authenticated)
     print("==========================")
     if request.user.is_authenticated:
-        # return redirect('app_todo/homepage')
-        # return HttpResponse("Hellow PURSUIT Team")
-        # logout(request)
         print(request.user, request.user.is_authenticated,'auth')
         return redirect('/home')
     else:
-    #     return render(request, 'login.html')
         print(request.user, request.user.is_authenticated,'unauth')
         return render(request, 'app_todo/login.html')
 
@@ -42,9 +38,9 @@ def login_auth(request):
         print (user)
         #history(request)
         return redirect('/home')
-        #return render(request, 'ServerAccess/history.html')
     else:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+
 @login_required
 def test_logout(request):
     return HttpResponse("Still not logged out")
