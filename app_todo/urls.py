@@ -16,6 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from . import views
+#------ DRF  -------------
+from django.conf.urls import url, include
+from rest_framework import routers
+from app_todo import views
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.login_todo, name='login'),
@@ -23,4 +32,6 @@ urlpatterns = [
     url(r'^logout$', views.logout_todo, name='logout'),
     url(r'^login$', views.login_auth, name='login_auth'),
     url(r'^test_logout$', views.test_logout, name='test_logout'),
+    url(r'^', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
