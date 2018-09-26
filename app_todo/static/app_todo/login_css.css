@@ -1,4 +1,5 @@
-    body{
+body{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
     background-color:#ddecef;
 }
 #login{margin-left: 10px; margin-right: 10px;}
