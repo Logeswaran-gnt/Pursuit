@@ -4,7 +4,7 @@ Managing the tasks to-do<br>
 [Web View](https://github.com/Logeswaran-gnt/Pursuit/blob/master/Others/pursuit_webView.png)
 [Mobile View](https://github.com/Logeswaran-gnt/Pursuit/blob/master/Others/pursuit_mobileView.png)
 
-Docker:
-sudo docker pull logeswaran/djangocontainer:djangoAuth
+Docker:<br>
+sudo docker pull logeswaran/djangocontainer:djangoAuth<br>
 sudo docker pull logeswaran/djangocontainer:djangoAuth_db
 
