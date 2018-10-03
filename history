@@ -1,4 +1,6 @@
 https://simpleisbetterthancomplex.com/tutorial/2016/07/26/how-to-reset-migrations.html
+psql -d postgres -U postgres
+------------------------------------------------------------------------
 
 logesh@Host-Logesh:~/Containerisation/djangocontainer/djangocontainer$ history 100
  1555  cd /home/logesh/Containerisation/
