@@ -1,0 +1,49 @@
+root@700213c7f29c:/# psql -d postgres -U postgres
+psql (10.5 (Debian 10.5-1.pgdg90+1))
+Type "help" for help.
+
+postgres=# \l
+                                 List of databases
+   Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges   
+-----------+----------+----------+------------+------------+-----------------------
+ postgres  | postgres | UTF8     | en_US.utf8 | en_US.utf8 | 
+ template0 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+           |          |          |            |            | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+           |          |          |            |            | postgres=CTc/postgres
+(3 rows)
+
+postgres=# ch postgres
+postgres-# \c postgres
+You are now connected to database "postgres" as user "postgres".
+postgres-# \d
+                        List of relations
+ Schema |               Name                |   Type   |  Owner   
+--------+-----------------------------------+----------+----------
+ public | app_todo_choice                   | table    | postgres
+ public | app_todo_choice_id_seq            | sequence | postgres
+ public | app_todo_question                 | table    | postgres
+ public | app_todo_question_id_seq          | sequence | postgres
+ public | auth_group                        | table    | postgres
+ public | auth_group_id_seq                 | sequence | postgres
+ public | auth_group_permissions            | table    | postgres
+ public | auth_group_permissions_id_seq     | sequence | postgres
+ public | auth_permission                   | table    | postgres
+ public | auth_permission_id_seq            | sequence | postgres
+ public | auth_user                         | table    | postgres
+ public | auth_user_groups                  | table    | postgres
+ public | auth_user_groups_id_seq           | sequence | postgres
+ public | auth_user_id_seq                  | sequence | postgres
+ public | auth_user_user_permissions        | table    | postgres
+ public | auth_user_user_permissions_id_seq | sequence | postgres
+ public | django_admin_log                  | table    | postgres
+ public | django_admin_log_id_seq           | sequence | postgres
+ public | django_content_type               | table    | postgres
+ public | django_content_type_id_seq        | sequence | postgres
+ public | django_migrations                 | table    | postgres
+ public | django_migrations_id_seq          | sequence | postgres
+ public | django_session                    | table    | postgres
+(23 rows)
+
+postgres-# 
+
