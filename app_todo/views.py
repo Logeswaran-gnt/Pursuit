@@ -35,7 +35,8 @@ def login_auth(request):
     user = authenticate(request, username=username, password=password)
     if user is not None:
         login(request, user)
-        print (user)
+        print (user,request.session,dir(request.session))
+        # request.session.set_expiry(10)
         #history(request)
         return redirect('/home')
     else:
